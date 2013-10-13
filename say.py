@@ -1,16 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask import request
 import pyttsx
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/say')
 def say():
 	text = request.args.get('text', '')
 	engine = pyttsx.init()
 	engine.say(text)
 	engine.runAndWait()
  	return 'you said: ' + text
+
+@app.route('/')
+def index():
+	return render_template('index.html')
 
 @app.errorhandler(500)
 def internal_error(error):
