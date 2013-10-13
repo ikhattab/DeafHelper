@@ -1,4 +1,4 @@
-deaf-helper
-===========
+DeafHelper
+==========
 
-TTS and STT Web Application
+TTS and STT Deaf Helper
