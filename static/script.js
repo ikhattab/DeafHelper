@@ -2,14 +2,14 @@
 $('#sayIt').click(function(e){
     var txtVal = $('#txt').val()
     console.log(txtVal);
-    // $.ajax({
-    //   url: '/say'
-    //   data: {}
-    // }).done(function(msg) {
-    //   console.log(msg);
-    // }).fail(function(err) {
-    //   console.log(err);
-    // })
+    $.ajax({
+      url: '/say',
+      data: {text: txtVal}
+    }).done(function(msg) {
+      console.log(msg);
+    }).fail(function(err) {
+      console.log(err);
+    })
     e.preventDefault();
   })
  
