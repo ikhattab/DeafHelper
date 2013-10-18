@@ -1,5 +1,5 @@
 (function(window){
-    var AUDIO_RECORDER_WORKER = 'js/audioRecorderWorker.js';
+    var AUDIO_RECORDER_WORKER = 'pocketsphinx/audioRecorderWorker.js';
     var AudioRecorder = function(source, cfg) {
 	this.recognizer = null;
 	var config = cfg || {};

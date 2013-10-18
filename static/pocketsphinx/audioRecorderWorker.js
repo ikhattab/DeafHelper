@@ -3,6 +3,7 @@ var recBuffers = [],
     inSampleRate;
 
 this.onmessage = function(e){
+  console.log(e);
   switch(e.data.command){
     case 'init':
       init(e.data.config);
